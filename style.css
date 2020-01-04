@@ -1,6 +1,6 @@
 h1 {
     font-family: 'Raleway', sans-serif;
-    font-size: 50px;
+    font-size: 1.4em;
 }
 
 .titleh1 {
@@ -9,9 +9,12 @@ h1 {
 
 p {
     font-family: 'Raleway', sans-serif;
-    font-size: 30px;
+    font-size: 0.7em ;
 }
 
+a{
+    text-decoration: none;
+}
 
 body {
     background-color: #211A1D;
@@ -21,13 +24,13 @@ body {
 }
 
 .header {
+    padding: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
     font-family: 'Ubuntu', sans-serif;
-    overflow: hidden;
     padding: 20px 50px;
     color: #F8F0FB;
-    width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .header a {
@@ -35,8 +38,10 @@ body {
     color: #F8F0FB;
     text-align: center;
     padding: 12px;
+    margin: 0px 20px;
     text-decoration: none;
     font-size: 18px;
+    width: 100px;
     line-height: 25px;
     border-radius: 4px;
 }
@@ -44,7 +49,7 @@ body {
 .header a.logo {
     font-size: 25px;
     font-weight: bold;
-    width: 50px;
+    width: 45px;
     padding: 0px;
     margin: 0px;
     animation: fadein;
@@ -57,17 +62,17 @@ body {
 }
 
 .header a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #F8F0FB;
+    color: #211A1D;
 }
 
 .header a.active {
-    background-color: dodgerblue;
-    color: white;
+    background-color: #5057E8;
+    color: #F8F0FB;
 }
 
-.header-right {
-    float: right;
+.header a.logo:hover{
+    background-color: #211A1D;
 }
 
 @media screen and (max-width: 500px) {
@@ -84,31 +89,44 @@ body {
 
 .introimg {
     margin-top: 100px;
-    margin-bottom: 100px;
     display: block;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 30vw;
+    width: 25vw;
     animation-name: intro;
     animation-duration: 5s;
     animation-timing-function: ease-out;
 }
 
+.introimgtext{
+    display: block;
+    color: #F8F0FB;
+    font-size: 5em;
+    animation-name: intro;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
 @keyframes intro{
     0%{
-        width: 25vw;
+        width: 20vw;
         opacity: 0.25;
     }
 
     100%{
-        width: 30vw;
+        width: 25vw;
         opacity: 1;
     }
 }
 .introtext {
     display: block;
     background-color: #F8F0FB;
-    padding: 20px 50px;
+    padding: 50px 50px;
     font-size: 40px;
     box-shadow: inset 0 0 30px #000000;
 }
@@ -125,7 +143,7 @@ body {
     color: #F8F0FB;
     display: block;
     background-color: #5057E8;
-    padding: 20px 50px;
+    padding: 50px 50px;
     font-size: 40px;
     box-shadow: inset 0 0 30px #000000;
 }
@@ -182,6 +200,32 @@ body {
     text-shadow: 0px 1px 0px #ffffff;
 }
 
+.aboutprofileimg{
+    height: 400px;
+    width: 300px;
+    float:right;
+}
+
+
+.aboutmetext {
+    color: #F8F0FB;
+    overflow: auto;
+    display: block;
+    background-color: #5057E8;
+    padding: 50px 50px;
+    font-size: 40px;
+    box-shadow: inset 0 0 30px #000000;
+}
+
+.aboutmetext2 {
+    color: #F8F0FB;
+    display: flex;
+    padding: 20px 50px;
+    margin: 50px 0px;
+    font-size: 40px;
+}
+
+
 .projectsBtn:hover {
     background: linear-gradient(to bottom, #ccc2a6 5%, #F8F0FB 100%);
     background-color: #ccc2a6;
@@ -203,6 +247,7 @@ body {
 .projectsWrapper {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     height: 500px;
 }
@@ -211,13 +256,71 @@ body {
     width: 250px;
     height: 300px;
     margin: 50px 50px;
-    background-color: white;
+    background-color: #5057E8;
+    color: #F8F0FB;
+    line-height: 30px;
+    text-align: center;
     transition: 1s;
     transition-timing-function: ease;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+}
+
+.projectsItem h1{
+    margin-top: 30%;
 }
 
 .projectsItem:hover {
-    width: 350px;
-    height: 400px;
+    width: 300px;
+    height: 350px;
     cursor: pointer;
+    background-color: #F8F0FB;
+    color: #211A1D;
+}
+
+.thumbnail:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
