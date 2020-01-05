@@ -9,10 +9,10 @@ h1 {
 
 p {
     font-family: 'Raleway', sans-serif;
-    font-size: 0.7em ;
+    font-size: 0.7em;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -56,9 +56,14 @@ body {
     animation-duration: 1s;
 }
 
-@keyframes fadein{
-    from{ opacity: 0;}
-    to{opacity: 1;}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .header a:hover {
@@ -71,7 +76,7 @@ body {
     color: #F8F0FB;
 }
 
-.header a.logo:hover{
+.header a.logo:hover {
     background-color: #211A1D;
 }
 
@@ -99,7 +104,7 @@ body {
     animation-timing-function: ease-out;
 }
 
-.introimgtext{
+.introimgtext {
     display: block;
     color: #F8F0FB;
     font-size: 5em;
@@ -112,17 +117,18 @@ body {
     margin-bottom: 100px;
 }
 
-@keyframes intro{
-    0%{
+@keyframes intro {
+    0% {
         width: 20vw;
         opacity: 0.25;
     }
 
-    100%{
+    100% {
         width: 25vw;
         opacity: 1;
     }
 }
+
 .introtext {
     display: block;
     background-color: #F8F0FB;
@@ -175,11 +181,11 @@ body {
     vertical-align: middle;
     transition: 1s;
     transition-timing-function: ease;
+    text-shadow: 0px 1px 0px #000000;
 }
 
 .projectstextdiv:hover {
     width: 500px;
-    height: 100px;
     font-size: 45px;
     background-color: white;
     cursor: pointer;
@@ -200,10 +206,11 @@ body {
     text-shadow: 0px 1px 0px #ffffff;
 }
 
-.aboutprofileimg{
+.aboutprofileimg {
     height: 400px;
-    width: 300px;
-    float:right;
+    width: 285px;
+    float: right;
+    margin: 5px;
 }
 
 
@@ -262,10 +269,10 @@ body {
     text-align: center;
     transition: 1s;
     transition-timing-function: ease;
-    box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
 }
 
-.projectsItem h1{
+.projectsItem h1 {
     margin-top: 30%;
 }
 
@@ -278,49 +285,54 @@ body {
 }
 
 .thumbnail:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    line-height: 25px;
+}
+
+.modal p{
+    font-size: 15px;
 }
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
